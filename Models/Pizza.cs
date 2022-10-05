@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using la_mia_pizzeria_post.Validations;
+using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 
 namespace la_mia_pizzeria_post
@@ -20,8 +21,9 @@ namespace la_mia_pizzeria_post
         public int PizzaId { get; private set; }
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         [StringLength(100, ErrorMessage = "Il nome non può avere più di 100 caratteri")]
-        public string  Name { get; set; }
+        public string Name { get; set; }
         [Required(ErrorMessage = "Il campo è obbligatorio")]
+        [MoreThanFiveWordsValidation]
         public string Description { get; set; }
         [Required(ErrorMessage = "Il campo è obbligatorio")]
         public string Image { get; set; }
