@@ -64,3 +64,7 @@ main .pizza_menu img:hover {
     transform: rotate(360deg);
     transition: all 5s;
 }
+
+.add-btn:hover {
+    color: white;
+}
