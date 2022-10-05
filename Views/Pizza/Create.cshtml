@@ -6,6 +6,9 @@
 }
 
 <div>
+    <div class="text-center">
+        <h2>Aggiungi una pizza:</h2>
+    </div>
 
     <div class="container form-pizza">
         <form asp-controller="Pizza" asp-action="Create" method="post">
@@ -22,13 +25,15 @@
             </div>
 
             <div class="mb-3">
-                <strong>Immagine:</strong>
+                <strong>Immagine </strong> <span>(fake img: "/img/img-6.jpeg"):</span>
                 <input asp-for="Image" class="d-block w-100" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <strong>Price:</strong>
-                <input asp-for="Price" class="d-block w-100" />
+            <strong>Price:</strong>
+            <div class="input-group mb-3">
+
+                <span class="input-group-text">€</span>
+                <input asp-for="Price" type="text" class="form-control" aria-label="Amount (to the nearest Euro)">
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="text-end">

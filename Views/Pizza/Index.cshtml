@@ -20,8 +20,8 @@
         @foreach (Pizza pizza in Model)
         {
             <div class="pizza_menu col mb-3 fw-bold">
-                <a href="@Url.Action("Details","Pizza",new {id = Model.IndexOf(pizza)})"><img class="mb-2" width="100" src="@pizza.Image" /></a>
-                <a href="@Url.Action("Details","Pizza",new {id = Model.IndexOf(pizza)})"> @pizza.Name</a>
+                <a href="@Url.Action("Details","Pizza",new {id = pizza.PizzaId})"><img class="mb-2" width="100" src="@pizza.Image" /></a>
+                <a href="@Url.Action("Details","Pizza",new {id = pizza.PizzaId})"> @pizza.Name</a>
             </div>
         }
     }
